@@ -1,0 +1,67 @@
+body{
+    background-image:url("pizza-background.jpg");
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+.small_pizza{
+    background-color:#ce6892;
+    flex:1
+}
+
+.medium_pizza{
+    background-color:hsl(335, 63%, 58%);
+    flex:1
+}
+
+.large_pizza{
+    background-color:#b81e5e ;
+    flex:1
+}
+
+.pizza{
+    border: 1px solid #e0e8ee;
+    padding:1em;
+    border-radius: 1em;
+    margin:1em;
+    margin-bottom:0.5em;
+
+}
+
+.contact_us{
+    background-image:url("clouds.jpg");
+}
+
+.shopping_cart{
+    
+   text-align: center;
+   font-weight: 200;
+   
+}
+
+.counter{
+    font-weight: 100;
+    font-style: italic;
+
+}
+
+.button{
+    align-items: center;
+    margin-right:0.5 em;
+}
+
+@media(min-width:760px){
+    body{
+        background-image: url("pizzaback3.jpg");
+    }
+}
+
+@media(min-width:960px){
+    body{
+        background-image: url("pizza-background.jpg");
+    }
+    .pizzas{
+        display:flex;
+    }
+}
+

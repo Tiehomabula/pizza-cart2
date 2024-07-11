@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect Pizzeria</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
+</head>
+<body>
+    <h1 font size="200">Perfect Pizzeria</h1>
+    <p><i><b>The best pizzas around town</p></i></b>
+    <div class="shopping_cart">
+        <h2>Shopping Cart</h2>
+        <h3 class="counter"><b>Order your yummy pizzas here!</h3></b>
+        <!--div x-data="{ 
+            products: [
+              { size: 'Small', price: 49.00, count: 0 },
+              { size: 'Med', price: 89.00, count: 0 },
+              { size: 'Large', price: 129.00, count: 0 }
+            ],
+            total() {
+    let sum = 0;
+    for (const product of this.products) {
+      sum += product.count * product.price;
+    }
+    return sum.toFixed(2); // Format total to two decimal places
+  } 
+}"> tried this code as well
+<p>Total Cost: R<span x-text="total"></span></p>
+            </div>
+            <button class="btn" @click="products[0].count++">+</button>
+<button class="btn" @click="if(products[0].count>0)products[0].count--">-</button-->
+
+
+
+ 
+
+
+       <!--div x-data="{ products: ['Small','Medium','Large'], quantity: {}, total: 0 }">
+        <ul>
+          <p v-for="product in products" :key="product.id">
+            <!--span class="shopping_cart">Small</span--><!--when you say span the words are inline with the title-->
+            <!--input type="number" x-model="quantity[product.id]" min="1" value="1" /-->
+            <!--div x-data="{s_title:'Small', m_title:'Medium', l_title:'Large', s_total=0, m_total=0, l_total=0, tc_title:'total cost', tc_total:0}">
+            <ul>
+            <div x-data="{count:0}">
+                <span class="shopping_cart">Small</span>
+            <button class="btn" class="button" @click="count++; s_total += 49">+</button> 
+             <span x-text="count"></span>
+            <button class="btn" @click="if(count>0)count--">-</button>
+            <span x-text="s_total">49.00</span>
+            
+            <div x-data="{count:0}">
+                <span class="shopping_cart">Med</span>
+            <button class="btn" class="button" @click="count++; m_total += 89">+</button> 
+             <span x-text="count"></span>
+            <button class="btn" @click="if(count>0)count--">-</button>
+            <span x-text="m_total">89.00</span>
+
+            <div x-data="{count:0}">
+                <span class="shopping_cart">Large</span>
+            <button class="btn" @click="count++; l_total += 129">+</button> 
+             <span x-text="count"></span>
+            <button class="btn" @click="if(count>0)count--">-</button>
+            <span x-text="l_total">129.00</span>
+            </li>
+        </ul>
+           <span x-text="tc_title"></span>
+           <span x-text="tc_total=s_total+m_total+l_total"></span>
+           
+       </div>
+      </div>
+    
+            </div-->
+
+            <!-- tried another code here couldnt calculate payment amount div x-data="{ smallTitle: 'Small', mediumTitle: 'Medium',
+            largeTitle: 'Large', smallPizzaTotal: 0, mediumPizzaTotal: 0,
+            largePizzaTotal: 0, totalCostTitle: 'Total Cost', totalCost: 0 }">
+                <div class="cart">
+                   
+                    <div class="small">
+                        <span x-text="smallTitle"></span>
+                        <button @click=" smallPizzaTotal += 49;">+</button>
+                        <button @click=" if( smallPizzaTotal > 0 ){
+                        smallPizzaTotal -= 49 }">-</button>
+                        <span x-text="smallPizzaTotal"></span>
+                    </div>
+                    <div class="medium"
+                        <span x-text="mediumTitle"></span>
+                        <button @click=" mediumPizzaTotal += 89;">+</button>
+                        <button @click=" if( mediumPizzaTotal > 0 ){
+                        mediumPizzaTotal -= 89 }">-</button>
+                        <span x-text="mediumPizzaTotal"></span>
+                    </div>
+                    <div class="large"
+                        <span x-text="largeTitle"></span>
+                        <button @click=" largePizzaTotal += 129;">+</button>
+                        <button @click=" if( largePizzaTotal > 0 ){
+                        largePizzaTotal -= 129 }">-</button>
+                        <span x-text="largePizzaTotal"></span>
+                    </div>
+                    <div class="tt"
+                        <h2 style="text-align: center;">Clear Cart</h2>
+                        <span x-text="totalCostTitle"></span>
+                        <span x-text="totalCost = smallPizzaTotal + mediumPizzaTotal + largePizzaTotal" ></span>
+                        <br>
+                        <br>
+                        <button class="check" on-click="pay.style.display='block';">Check Out</button>
+                    </div>
+                </div>
+                <br>
+                <br>
+    <div class="pay" id="pay">
+        <label>Payment Amount:</label>
+      <input type="text" class="pay" id="pay">
+      <button @click="if(input vale>= totalCost){print('Enjoy your pizzas!')}";</button-->
+
+        <div x-data="{
+            sCount: 0,
+            mCount: 0,
+            lCount: 0,
+            total: 0,
+            isCheckout: false,
+            inputValue: '',
+            message: '',
+            showMessage: function(msg) {
+                this.message = msg;
+                setTimeout(() => this.message = '', 3000); // Message disappears after 3 seconds
+            },
+            clearCart: function() {
+                this.sCount = 0;
+                this.mCount = 0;
+                this.lCount = 0;
+                this.total = 0;
+            }
+        }">
+            <section class="cart">
+                <section class="pizza">
+                <section  >
+                   <b> Small: R49,99</b>
+                    <button x-on:click="sCount++; total += 49.99">+</button>
+                    <button x-on:click="sCount = Math.max(sCount - 1, 0); total = Math.max(total - 49.99, 0)">-</button>
+                    <span x-text="sCount"></span>
+                </section>
+                <section>
+                   <b>Medium: R149,99</b> 
+                    <button x-on:click="mCount++; total += 149.99">+</button>
+                    <button x-on:click="mCount = Math.max(mCount - 1, 0); total = Math.max(total - 149.99, 0)">-</button>
+                    <span x-text="mCount"></span>
+                </section>
+                <section>
+                    <b>Large: R199,99</b>
+                    <button x-on:click="lCount++; total += 199.99">+</button>
+                    <button x-on:click="lCount = Math.max(lCount - 1, 0); total = Math.max(total - 199.99, 0)">-</button>
+                    <span x-text="lCount"></span>
+                </section>
+                
+                <div class="checkout" x-show="sCount > 0 || mCount > 0 || lCount > 0">
+                    <p><i><b>Total cost: R<span x-text="total.toFixed(2)"></span></i></b></p>
+                    <button @click="isCheckout = true"><i>Check out</i></button>
+                </div>
+    
+                <div class="messages">
+                    <p x-show="message" x-text="message" @click="message = ''"></p>
+                </div>
+    
+                <div x-show="isCheckout">
+                    <p></p>
+                    <label>
+                        <b><i>Payment amount:</b>
+                        <input type="text" x-model="inputValue">
+                    </label>
+                    <button @click="
+                        if (parseFloat(inputValue) >= total) {
+                            showMessage('Have a lovely day and enjoy your pizzas!');
+                            clearCart();
+                            isCheckout = false;
+                        } else {
+                            showMessage('Oops! Invalid amount entered.');
+                        }
+                    ">Let's pay!</button></i>
+                </div>
+            </section>
+        </section>
+     
+           
+           
+    
+
+     <div class="pizzas">
+    <div class="pizza small_pizza">
+ <h2>Small Pizza</h2>
+ <img src="pizza1.jpg" width= "140">
+    <h3>R49.00</h3>
+    <div>
+        Small magherita pizza with 3 toppings: 1 meat topping and 2 or less other toppings or just 3 or less other toppings. Can top up with a buddy colddrink of your choice!
+    </div>   
+</div> 
+   <div class="pizza medium_pizza">
+ <h2>Medium Pizza</h2>
+<img src="pizza2.jpg" width= "150">
+    <h3>R89.00</h3>
+    <div>
+        Medium magherita pizza with 3 toppings: 2 or less meat toppings , 3 or less other toppings. Can choose between a thick or thin pizza base!
+    </div>   
+</div>
+<div class=" pizza large_pizza">
+ <h2>Large Pizza</h2>
+ <img src="pizza3.jpg" width= "140">
+   <h3>R129.00</h3> 
+    <div>
+        Large magherita pizza with 4 toppings: 4 or less meat toppings, 4 or less other toppings. Can upsize with 2L colddrink of choice and/or malva pudding!
+    </div>   
+</div>
+    </div>
+
+
+    
+<div class="pizza contact_us">
+ <h2>Contact details</h2>
+<i>Contact us at: 011 567 8905 or at info@perfectpizza.co.za</i>
+       
+</div>
+
+    
+</body>
+</html>
